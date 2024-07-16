@@ -3,6 +3,7 @@ import Banner from "../../Component/Banner";
 import { Link } from "react-router-dom";
 import { FaMoneyBillTrendUp } from "react-icons/fa6";
 import { GiTakeMyMoney } from "react-icons/gi";
+import Services from "../../Component/Services";
 
 const UserDashboard = () => {
     return (
@@ -10,10 +11,13 @@ const UserDashboard = () => {
             <Banner />
             <div className="-mt-10">
                 <div className="card bg-base-100 w-3/4 mx-auto shadow-xl rounded-md py-5">
-                    <div>
+                    <div className="flex justify-between">
                         <div className="ml-8">
                             <p>Your Balance</p>
                             <p className="font-bold">$ 2348935</p>
+                        </div>
+                        <div className="mr-8">
+                        <button className="hover:border-b border-primary">Statement</button>
                         </div>
                     </div>
                     <div className="flex justify-center gap-8">
@@ -47,6 +51,7 @@ const UserDashboard = () => {
                     </div>
                 </div>
             </div>
+            <Services/>
         </div>
     );
 };
